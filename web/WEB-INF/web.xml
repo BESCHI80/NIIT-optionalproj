@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>test</servlet-name>
+        <servlet-class>student.test</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MyList</servlet-name>
+        <servlet-class>student.MyList</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>javap</servlet-name>
+        <servlet-class>com.javap</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>javapo</servlet-name>
+        <servlet-class>javapo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>test</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyList</servlet-name>
+        <url-pattern>/MyList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>javap</servlet-name>
+        <url-pattern>/javap</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>javapo</servlet-name>
+        <url-pattern>/javapo</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <resource-ref>
+        <description>jdbc:mysql://localhost:3306/onlinequiz?zeroDateTimeBehavior=convertToNull</description>
+        <res-ref-name>javapoint</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+</web-app>
